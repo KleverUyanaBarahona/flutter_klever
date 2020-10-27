@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'BackWheater.dart';
+import 'package:english_words/english_words.dart';
+import 'RandomWords.dart';
 
 class Header extends StatelessWidget {
   @override
@@ -41,14 +43,17 @@ class Header extends StatelessWidget {
       ),
     );
 
+    final wordPair = new WordPair.random();
+
     final holamundo = new Center(
       child: Text(
-        "Hola Mundo",
+        wordPair.asPascalCase,
         textDirection: TextDirection.ltr,
       ),
     );
 
-
+    //final RamdonWord = new RandomWords();
+    final listRandom = new RandomWords();
     return new Scaffold(
       body: new Stack(
         children: <Widget>[
@@ -69,7 +74,8 @@ class Header extends StatelessWidget {
                   ),
                 ),
                 button,
-                holamundo
+                holamundo,
+                //listRandom
               ],
             ),
           )

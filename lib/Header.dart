@@ -41,6 +41,14 @@ class Header extends StatelessWidget {
       ),
     );
 
+    final holamundo = new Center(
+      child: Text(
+        "Hola Mundo",
+        textDirection: TextDirection.ltr,
+      ),
+    );
+
+
     return new Scaffold(
       body: new Stack(
         children: <Widget>[
@@ -60,7 +68,8 @@ class Header extends StatelessWidget {
                     fontWeight:  FontWeight.w600
                   ),
                 ),
-                button
+                button,
+                holamundo
               ],
             ),
           )
